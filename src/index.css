@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+@custom-variant: dark (&where([data-theme=dark],[data-theme=dark] *));
+@theme {
+  --color-primary-yellow: #fec101;
+  --color-accent-gray: #555555;
+  --color-border-gray: #a3a3a3;
+}
+
+@layer base {
+  html,
+  body,
+  #root,
+  .App,
+  .home {
+    @apply h-auto w-full m-0 p-0 overflow-x-hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    @apply h-[96vh] min-h-fit box-border my-0 lg:mx-[10rem] sm:mx-[1rem] pt-[4vh] sm:!px-4;
+    scroll-margin-top: 17vh;
+  }
+
+  .navbar-section-hover{
+    @apply hover:text-primary-yellow hover:underline hover:underline-offset-[1rem];
+  }
+
+  .btn-style {
+    @apply font-semibold text-[0.80rem] p-[1rem] w-32 rounded-[2rem]  border-[0.1rem] border-black;
+    transition: all 300ms ease;
+  }
+
+  .details-box {
+    @apply p-6 flex flex-1 flex-col border-[0.1rem] border-[#a3a3a3] rounded-4xl items-center text-center justify-center md:justify-center;
+  }
+
+  .details-container{
+    @apply p-6 flex bg-white border-[0.1rem] border-border-gray rounded-4xl text-center
+  }
+
+  .project-image-style{
+    @apply rounded-4xl w-[90%] h-[90%];
+  }
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+ 
